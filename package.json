@@ -1,0 +1,115 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vtquy98/pinbus-v3-frontend",
+  "author": "quyvt.dev",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "release": "release-it",
+    "deploy": "yarn && yarn build && pm2 restart 1"
+  },
+  "dependencies": {
+    "@rjsf/bootstrap-4": "^3.2.1",
+    "@rjsf/core": "^3.2.1",
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "animated-scroll-to": "^2.2.0",
+    "aos": "^2.3.4",
+    "axios": "^0.24.0",
+    "json2csv": "^5.0.7",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "next": "^11.1.0",
+    "next-themes": "^0.0.15",
+    "react": "^17.0.2",
+    "react-awesome-slider": "^4.1.0",
+    "react-collapsible": "^2.8.4",
+    "react-dates": "^21.8.0",
+    "react-device-detect": "^2.1.2",
+    "react-dnd": "^14.0.4",
+    "react-dnd-html5-backend": "^14.0.2",
+    "react-dom": "^17.0.2",
+    "react-facebook-pixel": "^1.0.4",
+    "react-feather": "^2.0.9",
+    "react-is": "^17.0.2",
+    "react-jsonschema-form": "^1.8.1",
+    "react-messenger-customer-chat": "^0.8.0",
+    "react-modal": "^3.14.4",
+    "react-quill": "^1.3.5",
+    "react-render-html": "^0.6.0",
+    "react-responsive-carousel": "^3.2.22",
+    "react-sliding-pane": "^7.1.0",
+    "react-table": "^6.9.2",
+    "react-tag-input": "^6.7.3",
+    "react-toastify": "^8.1.0",
+    "react-toggle": "^4.1.2",
+    "react-tooltip": "^4.2.21",
+    "react-transition-group": "^4.4.2",
+    "sass": "^1.44.0",
+    "sharp": "^0.29.3",
+    "swiper": "^7.3.1",
+    "tailwind-rn": "^3.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^13.1.0",
+    "@release-it/conventional-changelog": "^3.3.0",
+    "@types/react": "^17.0.19",
+    "@types/react-jsonschema-form": "^1.7.7",
+    "autoprefixer": "^10.3.2",
+    "babel-eslint": "^10.1.0",
+    "commitlint": "^13.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^6.0.0",
+    "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
+    "release-it": "^14.11.5",
+    "tailwindcss": "^2.2.7",
+    "typescript": "^4.3.5"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "next",
+      "prettier"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "none",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": false
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  }
+}

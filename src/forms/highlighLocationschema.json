@@ -1,0 +1,83 @@
+{
+  "title": "HIGHLIGHT LOCATION ITEM",
+  "type": "object",
+  "required": ["highlight_position_title", "highlight_position_address", "highlight_position_img"],
+  "properties": {
+    "highlight_position_nanoid": {
+      "type": "string"
+    },
+    "highlight_position_title": {
+      "title": "Location name",
+      "type": "string"
+    },
+    "highlight_position_address": {
+      "title": "Address",
+      "type": "string"
+    },
+    "highlight_position_img": {
+      "title": "Image",
+      "type": "string"
+    },
+    "display_on_home": {
+      "title": "Display on home page",
+      "type": "boolean"
+    },
+    "highlight_position_status": {
+      "title": "Open/Close",
+      "type": "boolean"
+    },
+    "highlight_position_province": {
+      "title": "Province",
+      "type": "string"
+    },
+    "highlight_position_district": {
+      "title": "District",
+      "type": "string"
+    },
+    "highlight_position_fields": {
+      "title": "Fields",
+      "type": "string",
+      "enum": [
+        "Cà phê",
+        "Nhà hàng",
+        "Cửa hàng tiện lợi",
+        "Siêu thị",
+        "Trung tâm thương mại",
+        "Trường học",
+        "Ngân hàng",
+        "Bệnh viện",
+        "Sân bay",
+        "Spa/ Nail",
+        "Khách sạn",
+        "Phòng Gym",
+        "Bar/ Club",
+        "Văn phòng",
+        "Khác"
+      ]
+    },
+    "link": {
+      "title": "Link",
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "highlight_position_nanoid": { "ui:widget": "hidden" },
+    "highlight_position_img": { "ui:widget": "filewidget" },
+    "display_on_home": {
+      "ui:widget": "radio"
+    },
+    "highlight_position_status": {
+      "ui:widget": "radio"
+    },
+    "created_at": { "ui:widget": "hidden" },
+    "highlight_position_province": {
+      "ui:widget": "provincewidget"
+    },
+    "highlight_position_district": {
+      "ui:widget": "districtwidget"
+    }
+  }
+}

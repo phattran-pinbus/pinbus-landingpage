@@ -1,0 +1,49 @@
+{
+  "title": "CONTENT",
+  "type": "object",
+  "required": ["home_nanoid"],
+  "properties": {
+    "home_detail_nanoid": {
+      "type": "string"
+    },
+    "home_nanoid": {
+      "type": "object"
+    },
+    "home_detail_title": { "title": "Title", "type": "string" },
+    "home_detail_content": {
+      "title": "Content",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "media_url": {
+      "title": "Video",
+      "type": "string"
+    },
+    "media_thumbnail": {
+      "title": "Thumbnail",
+      "type": "string"
+    },
+    "media_nanoid": {
+      "title": "Image",
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "home_detail_nanoid": { "ui:widget": "hidden" },
+    "media_nanoid": {
+      "ui:widget": "hidden"
+    },
+    "home_nanoid": { "ui:widget": "hidden" },
+    "media_url": {
+      "ui:help": "You must ensure the URL contains embed rather watch as the /embed endpoint allows outside requests, whereas the /watch endpoint does not. For example: https://www.youtube.com/embed/JMjQP66TXzg"
+    },
+    "media_thumbnail": { "ui:widget": "filewidget" },
+    "home_detail_content": {
+      "items": {
+        "ui:widget": "contenteditorwidget"
+      }
+    }
+  }
+}

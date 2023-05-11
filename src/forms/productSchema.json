@@ -1,0 +1,39 @@
+{
+  "title": "PROMOTION ITEM",
+  "type": "object",
+  "required": ["article_title", "article_url_img", "article_content"],
+  "properties": {
+    "article_nanoid": {
+      "type": "string"
+    },
+    "article_section": {
+      "title": "Product Link",
+      "type": "string"
+    },
+    "article_title": {
+      "title": "Product Title",
+      "type": "string"
+    },
+
+    "article_url_img": {
+      "title": "Mobile cover image",
+      "type": "string"
+    },
+
+    "article_content": {
+      "title": "Product Content",
+      "type": "string"
+    },
+
+    "article_created_at": {
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "article_nanoid": { "ui:widget": "hidden" },
+    "article_section": { "ui:widget": "hidden" },
+    "article_url_img": { "ui:widget": "filewidget" },
+    "article_created_at": { "ui:widget": "hidden" },
+    "article_content": { "ui:widget": "contenteditorwidget" }
+  }
+}

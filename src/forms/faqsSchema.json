@@ -1,0 +1,17 @@
+{
+  "title": "Faqs Page",
+  "type": "object",
+  "required": ["faqs_question", "faqs_answer"],
+  "properties": {
+    "faqs_nanoid": {
+      "type": "string"
+    },
+    "faqs_question": { "title": "Question", "type": "string" },
+    "faqs_answer": { "title": "Answer", "type": "string" }
+  },
+  "uiSchema": {
+    "faqs_nanoid": { "ui:widget": "hidden" },
+    "faqs_type_section": { "ui:widget": "hidden" },
+    "faqs_answer": { "ui:widget": "contenteditorwidget" }
+  }
+}

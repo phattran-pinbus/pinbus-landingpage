@@ -1,0 +1,46 @@
+{
+  "title": "HERO BACKGROUND SECTION",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "slide_nanoid": {
+      "type": "string"
+    },
+    "content": {
+      "title": "List slides",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "subtitle": {
+            "type": "string",
+            "title": "Subtitle"
+          },
+          "content": {
+            "type": "string",
+            "title": "Content"
+          },
+          "image": {
+            "type": "string",
+            "title": "Image"
+          }
+        }
+      }
+    }
+  },
+  "uiSchema": {
+    "slide_nanoid": { "ui:widget": "hidden" },
+    "content": {
+      "items": {
+        "image": { "ui:widget": "filewidget" },
+        "content": { "ui:widget": "contenteditorwidget" },
+        "title": { "ui:widget": "contenteditorwidget" },
+        "subtitle": { "ui:widget": "contenteditorwidget" }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "title": "Privacy Policy",
+    "type": "object",
+    "required": ["policy_content"],
+    "properties": {
+      "policy_nanoid": {
+        "type": "string"
+      },
+      "policy_content": { "title": "Policy Item", "type": "string" }
+    },
+    "uiSchema": {
+      "policy_nanoid": { "ui:widget": "hidden" },
+      "policy_type_section": { "ui:widget": "hidden" },
+      "policy_content": { "ui:widget": "contenteditorwidget" }
+    }
+  }
+  

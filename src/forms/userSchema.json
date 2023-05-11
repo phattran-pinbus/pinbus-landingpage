@@ -1,0 +1,30 @@
+{
+  "title": "USER ITEM",
+  "type": "object",
+  "required": ["role"],
+  "properties": {
+    "user_nanoid": {
+      "type": "string"
+    },
+    "email": {
+      "title": "Email",
+      "type": "string"
+    },
+    "password": {
+      "title": "Password",
+      "type": "string"
+    },
+    "role": {
+      "title": "Role",
+      "type": "string",
+      "enum": ["ROOT", "MARKETING", "CONTENT", "SALE"]
+    },
+    "created_at": {
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "user_nanoid": { "ui:widget": "hidden" },
+    "created_at": { "ui:widget": "hidden" }
+  }
+}

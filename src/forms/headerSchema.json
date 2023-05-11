@@ -1,0 +1,20 @@
+{
+  "title": "HEADER SECTION",
+  "type": "object",
+  "required": ["home_nanoid", "home_section"],
+  "properties": {
+    "home_nanoid": {
+      "type": "string"
+    },
+    "home_title": { "title": "Title", "type": "string" },
+    "home_section": { "type": "string", "title": "section" },
+    "home_description": {
+      "type": "string",
+      "title": "Description"
+    }
+  },
+  "uiSchema": {
+    "home_nanoid": { "ui:widget": "hidden" },
+    "home_section": { "ui:widget": "hidden" }
+  }
+}

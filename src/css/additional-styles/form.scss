@@ -1,0 +1,124 @@
+.rjsf {
+  overflow-x: auto;
+  @apply p-2;
+
+  fieldset legend {
+    @apply font-inter text-xl font-bold mb-8 border-b-2 bg-gray-200 p-3 w-full rounded-md text-gray-700;
+  }
+
+  .field-array {
+    legend {
+      @apply font-inter text-base block mr-2 mb-2 bg-transparent font-medium border-none p-0 text-gray-700;
+    }
+  }
+
+  fieldset .btn-info {
+    @apply text-sm text-gray-800 border border-blue-200 font-bold py-2;
+  }
+
+  .panel-danger {
+    @apply bg-red-100 border-red-400 text-red-700 rounded-md mb-2 p-2;
+    .panel-title {
+      @apply font-bold mb-2;
+    }
+  }
+
+  .text-danger {
+    @apply text-red-700;
+  }
+
+  .text-danger::before {
+    content: '*';
+    @apply mr-2;
+  }
+
+  .form-group {
+    @apply mb-4;
+
+    label {
+      @apply font-inter font-medium block mr-2 mb-2 text-gray-600;
+    }
+
+    .help-block {
+      @apply text-xs text-gray-600 italic mt-2;
+    }
+
+    //custom input with text type
+    input {
+      @apply rounded-lg border-transparent flex-1 appearance-none border border-gray-200 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent;
+    }
+
+    textarea {
+      @apply rounded-lg border-transparent flex-1 appearance-none border border-gray-200 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent;
+    }
+
+    input:disabled {
+      @apply text-gray-600 bg-gray-100 cursor-not-allowed;
+    }
+
+    .field-radio-group {
+      @apply flex;
+      @apply flex-wrap;
+      @apply mb-4;
+
+      label {
+        @apply font-inter font-medium block mr-2 mb-2 text-gray-600;
+      }
+
+      input[type='radio'] {
+        @apply mr-2;
+      }
+    }
+
+    select {
+      @apply rounded-lg border border-gray-200 w-full;
+    }
+  }
+
+  // style button with type submit
+  button[type='submit'] {
+    @apply bg-purple-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg;
+  }
+
+  i.glyphicon {
+    display: none;
+  }
+
+  .array-item-toolbox {
+    @apply flex justify-end items-center mb-2;
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .array-item-move-up {
+    @apply bg-gray-100 text-gray-600 font-bold py-1 px-1 rounded-lg m-1;
+  }
+  .array-item-move-down {
+    @apply bg-gray-100 text-gray-600 font-bold py-1 px-1 rounded-lg m-1;
+  }
+  .array-item-remove {
+    @apply bg-red-100 text-red-700 font-bold py-1 px-1 rounded-lg m-1;
+  }
+
+  .array-item-move-up::after {
+    content: 'Up';
+    font-weight: normal;
+  }
+  .array-item-move-down::after {
+    content: 'Down';
+    font-weight: normal;
+  }
+  .btn-add {
+    @apply bg-green-100 text-gray-600 font-bold px-5 rounded-lg m-1;
+  }
+  .btn-add::after {
+    content: 'Add';
+    font-weight: normal;
+  }
+  .array-item-remove::after {
+    content: 'Remove';
+    font-weight: normal;
+  }
+}

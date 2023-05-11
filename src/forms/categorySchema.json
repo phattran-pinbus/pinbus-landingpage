@@ -1,0 +1,22 @@
+{
+  "title": "CATEGORY ITEM",
+  "type": "object",
+  "required": ["category_name"],
+  "properties": {
+    "category_nanoid": {
+      "type": "string"
+    },
+    "category_name": {
+      "title": "Category Name",
+      "type": "string"
+    },
+
+    "created_at": {
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "category_nanoid": { "ui:widget": "hidden" },
+    "created_at": { "ui:widget": "hidden" }
+  }
+}

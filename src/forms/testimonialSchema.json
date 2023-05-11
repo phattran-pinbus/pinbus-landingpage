@@ -1,0 +1,35 @@
+{
+    "title": "HIGHLIGHT LOCATION ITEM",
+    "type": "object",
+    "required": ["testimonial_avatar", "testimonial_content", "testimonial_name"],
+    "properties": {
+      "testimonial_nanoid": {
+        "type": "string"
+      },
+      "testimonial_avatar": {
+        "title": "Avatar",
+        "type": "string"
+      },
+      "testimonial_content": {
+        "title": "Testimonial comment",
+        "type": "string"
+      },
+      "testimonial_name": {
+        "title": "Testimonial name",
+        "type": "string"
+      },
+      "testimonial_position_company_name": {
+        "title": "Position Company Name",
+        "type": "string"
+      },
+      "created_at": {
+        "type": "string"
+      }
+    },
+    "uiSchema": {
+      "testimonial_nanoid": { "ui:widget": "hidden" },
+      "testimonial_avatar": { "ui:widget": "filewidget" },
+      "created_at": { "ui:widget": "hidden" }
+    }
+  }
+  

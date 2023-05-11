@@ -1,0 +1,35 @@
+{
+  "title": "ADVERTISEMENTS",
+  "type": "object",
+  "required": [ "article_url_img", "article_content"],
+  "properties": {
+    "article_nanoid": {
+      "type": "string"
+    },
+    "article_section": {
+      "title": "section",
+      "type": "string"
+    },
+
+    "article_url_img": {
+      "title": "Thubnail",
+      "type": "string"
+    },
+
+    "article_content": {
+      "title": "Content",
+      "type": "string"
+    },
+
+    "article_created_at": {
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "article_nanoid": { "ui:widget": "hidden" },
+    "article_section": { "ui:widget": "hidden" },
+    "article_url_img": { "ui:widget": "filewidget" },
+    "article_created_at": { "ui:widget": "hidden" },
+    "article_content": { "ui:widget": "contenteditorwidget" }
+  }
+}

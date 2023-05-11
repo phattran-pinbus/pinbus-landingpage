@@ -1,0 +1,127 @@
+{
+  "title": "Yêu cầu trở thành đối tác",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "assigned": {
+      "type": "string",
+      "title": "Phân công"
+    },
+    "created_at": {
+      "title": "Ngày tạo",
+      "type": "string"
+    },
+    "partner_company_address": {
+      "title": "Địa chỉ",
+      "type": "string"
+    },
+    "partner_city_name": {
+      "title": "Tỉnh thành",
+      "type": "string"
+    },
+    "partner_company_name": {
+      "title": "Tên Doanh nghiệp",
+      "type": "string"
+    },
+    "partner_description": {
+      "title": "Mô tả",
+      "type": "string"
+    },
+    "partner_email": {
+      "title": "Email",
+      "type": "string"
+    },
+    "partner_nanoid": {
+      "title": "ID",
+      "type": "string"
+    },
+    "partner_phone_number": {
+      "title": "SĐT",
+      "type": "string"
+    },
+    "source": {
+      "title": "Nguồn",
+      "type": "string"
+    },
+    "status": {
+      "title": "Trạng thái",
+      "type": "string",
+      "enum": ["0", "1", "2"],
+      "enumNames": ["Chờ xử lý", "Thành công", "Từ chối"]
+    },
+    "tracking_id": {
+      "title": "Tracking ID (AccessTrade)",
+      "type": "string"
+    },
+    "updated_at": {
+      "title": "Cập nhật lần cuối",
+      "type": "string"
+    },
+    "updated_by": {
+      "title": "Người cập nhật",
+      "type": "string"
+    },
+    "note": {
+      "title": "Ghi chú",
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "ui:order": [
+      "partner_nanoid",
+      "created_at",
+      "partner_company_name",
+      "partner_company_address",
+      "partner_city_name",
+      "partner_phone_number",
+      "partner_email",
+      "partner_description",
+      "source",
+      "tracking_id",
+      "status",
+      "assigned",
+      "note",
+      "updated_at",
+      "updated_by"
+    ],
+    "partner_nanoid": { "ui:disabled": true },
+    "created_at": { "ui:widget": "datetime", "ui:disabled": true },
+    "updated_at": { "ui:widget": "datetime", "ui:disabled": true },
+    "note": { "ui:widget": "textarea" },
+    "partner_company_address": {
+      "ui:disabled": true
+    },
+    "tracking_id": {
+      "ui:disabled": true
+    },
+    "partner_city_name": {
+      "ui:disabled": true
+    },
+    "partner_company_name": {
+      "ui:disabled": true
+    },
+    "partner_description": {
+      "ui:disabled": true,
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 5
+      }
+    },
+    "partner_email": {
+      "ui:disabled": true
+    },
+    "partner_phone_number": {
+      "ui:disabled": true
+    },
+    "source": {
+      "ui:disabled": true
+    },
+    "assigned": {
+      "ui:widget": "userselectwidget"
+    },
+    "updated_by": {
+      "ui:widget": "userselectwidget",
+      "ui:disabled": true
+    }
+  }
+}

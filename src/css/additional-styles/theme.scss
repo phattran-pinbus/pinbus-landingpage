@@ -1,0 +1,409 @@
+:focus,
+button:focus,
+.btn:focus,
+.btn-sm:focus,
+.form-input:focus,
+.form-textarea:focus,
+.form-multiselect:focus,
+.form-select:focus,
+.form-checkbox:focus,
+.form-radio:focus {
+  @apply outline-blue;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-checkbox,
+.form-radio {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+// Hamburger button
+.hamburger {
+  svg > * {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      transform-origin: center;
+      transform: rotate(0deg);
+    }
+
+    &:nth-child(1) {
+      transition: y 0.075s 0.12s ease, opacity 0.075s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    &:nth-child(2) {
+      transition-property: transform;
+      transition-duration: 0.075s;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    &:nth-child(3) {
+      transition: y 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+
+  &.active {
+    svg > * {
+      &:nth-child(1) {
+        opacity: 0;
+        transform: rotate(45deg);
+        y: 11;
+        transition: y 0.075s ease, opacity 0.075s 0.12s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+        transition-delay: 0.12s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+
+      &:nth-child(3) {
+        y: 11;
+        transform: rotate(-45deg);
+        transition: y 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+  }
+}
+
+// Light switch
+.form-switch {
+  input[type='checkbox'].light-switch {
+    + label {
+      @apply bg-teal-500;
+
+      > span:first-child {
+        .dark & {
+          left: 22px;
+        }
+      }
+    }
+  }
+}
+
+// Custom Swiper styles
+.carousel {
+  &.swiper-container {
+    @apply overflow-visible;
+  }
+
+  .swiper-slide {
+    img {
+      opacity: 0.32;
+    }
+
+    > div > div {
+      @apply opacity-0;
+    }
+
+    &.swiper-slide-active,
+    &.swiper-slide-duplicate-active {
+      @apply shadow-2xl;
+
+      img {
+        @apply opacity-100;
+      }
+
+      > div > div {
+        @apply opacity-100;
+      }
+    }
+  }
+}
+
+// Helper class to fix swipering carousel on Safari
+.translate-z-0 {
+  transform: translateZ(0);
+}
+
+// Tags animation
+$tags-animation-duration: 30000ms;
+
+.tags-animation {
+  animation: tagsmove $tags-animation-duration linear infinite;
+}
+
+.tags-1 {
+  animation-delay: $tags-animation-duration * -0.1; // -0.1 will make the tag move 76px right (i.e. 768px container size * -0.1)
+}
+
+.tags-2 {
+  animation-delay: $tags-animation-duration * -0.16;
+}
+
+.tags-3 {
+  animation-delay: $tags-animation-duration * -0.23;
+}
+
+.tags-4 {
+  animation-delay: $tags-animation-duration * -0.27;
+}
+
+.tags-5 {
+  animation-delay: $tags-animation-duration * -0.44;
+}
+
+.tags-6 {
+  animation-delay: $tags-animation-duration * -0.55;
+}
+
+.tags-7 {
+  animation-delay: $tags-animation-duration * -0.63;
+}
+
+.tags-8 {
+  animation-delay: $tags-animation-duration * -0.73;
+}
+
+.tags-9 {
+  animation-delay: $tags-animation-duration * -0.76;
+}
+
+.tags-10 {
+  animation-delay: $tags-animation-duration * -0.8;
+}
+
+@keyframes tagsmove {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(768px);
+  }
+}
+
+.render—html {
+  ul {
+    li {
+      &:before {
+        content: '\2022';
+        @apply mr-1.5;
+      }
+      @apply mb-2;
+    }
+  }
+
+  ol {
+    counter-reset: item;
+    margin-left: 0;
+    padding-left: 0;
+    @apply mt-2;
+    li {
+      display: block;
+      @apply mb-2;
+    }
+    li::before {
+      display: inline-block;
+      content: counter(item) '. ';
+      counter-increment: item;
+      @apply mr-1.5;
+    }
+  }
+
+  .ql-indent-5 {
+    @apply flex justify-center items-center;
+  }
+
+  .ql-indent-1 {
+    @apply ml-4;
+  }
+  .ql-indent-2 {
+    @apply ml-8;
+  }
+  .ql-indent-3 {
+    @apply ml-12;
+  }
+  .ql-indent-4 {
+    @apply ml-16;
+  }
+}
+
+.render—custom-ul-li {
+  ul {
+    li {
+      &:before {
+        content: '✓';
+        @apply mr-1.5;
+      }
+      @apply mb-2;
+    }
+  }
+}
+
+.react-toggle {
+  touch-action: pan-x;
+
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-toggle-screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.react-toggle--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.react-toggle-track {
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #4d4d4d;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #000000;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: #19ab27;
+}
+
+.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #128d15;
+}
+
+.react-toggle-track-check {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  left: 8px;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-check {
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle-track-x {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  right: 10px;
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-x {
+  opacity: 0;
+}
+
+.react-toggle-thumb {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #4d4d4d;
+  border-radius: 50%;
+  background-color: #fafafa;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: #19ab27;
+}
+
+.react-toggle--focus .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 3px 2px #0099e0;
+  -moz-box-shadow: 0px 0px 3px 2px #0099e0;
+  box-shadow: 0px 0px 2px 3px #0099e0;
+}
+
+.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 5px 5px #0099e0;
+  -moz-box-shadow: 0px 0px 5px 5px #0099e0;
+  box-shadow: 0px 0px 5px 5px #0099e0;
+}
+
+//custom styles for content editor for admin panel
+h2 {
+  @apply h1 lg:text-text-hero-mobile font-normal text-subHeader;
+}
+
+h1 {
+  @apply h1 lg:text-text-hero font-normal text-text-hero-mobile;
+}
+
+strong {
+  @apply font-extrabold;
+}
+
+.ReactTable {
+  .rt-tr {
+    &.selected-row {
+      @apply bg-gray-200;
+    }
+  }
+}
+
+.download-tooltip {
+  font-size: 20px !important;
+  pointer-events: auto !important;
+  &:hover {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}

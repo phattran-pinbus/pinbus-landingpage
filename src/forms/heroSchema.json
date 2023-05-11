@@ -1,0 +1,21 @@
+{
+  "title": "HERO BACKGROUND SECTION",
+  "type": "object",
+  "required": ["main_bg_nanoid", "main_bg_content", "main_bg_url_img", "main_bg_section"],
+  "properties": {
+    "main_bg_nanoid": { "title": "id", "type": "string" },
+    "main_bg_title": { "type": "string", "title": "Title" },
+    "main_bg_content": {
+      "type": "string",
+      "title": "Content"
+    },
+    "main_bg_url_img": { "type": "string", "title": "Image url" },
+    "main_bg_section": { "type": "string", "title": "Section" }
+  },
+  "uiSchema": {
+    "main_bg_url_img": { "ui:widget": "filewidget" },
+    "main_bg_nanoid": { "ui:widget": "hidden" },
+    "main_bg_section": { "ui:widget": "hidden" },
+    "main_bg_content": { "ui:widget": "contenteditorwidget" }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "title": "CONTENT",
+  "type": "object",
+  "required": ["home_nanoid", "home_detail_link"],
+  "properties": {
+    "home_detail_nanoid": {
+      "type": "string"
+    },
+    "home_nanoid": {
+      "type": "object"
+    },
+    "home_detail_title": { "title": "Title", "type": "string" },
+    "home_detail_content": {
+      "title": "Subtitle",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "home_detail_description": {
+      "title": "Content",
+      "type": "string"
+    },
+    "home_detail_link": {
+      "title": "Link",
+      "type": "string"
+    },
+    "media_url": {
+      "title": "Image",
+      "type": "string"
+    },
+    "media_nanoid": {
+      "title": "Image",
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "home_detail_nanoid": { "ui:widget": "hidden" },
+    "media_nanoid": {
+      "ui:widget": "hidden"
+    },
+    "media_url": { "ui:widget": "filewidget" },
+    "home_nanoid": { "ui:widget": "hidden" },
+    "home_detail_description": {
+      "ui:widget": "contenteditorwidget"
+    }
+  }
+}

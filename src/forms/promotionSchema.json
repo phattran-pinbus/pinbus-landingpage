@@ -1,0 +1,62 @@
+{
+  "title": "PROMOTION ITEM",
+  "type": "object",
+  "required": ["promotion_desktop_img", "promotion_mobile_img", "promotion_link", "promotion_image_content"],
+  "properties": {
+    "promotion_nanoid": {
+      "type": "string"
+    },
+    "promotion_title": {
+      "title": "Promotion Title",
+      "type": "string"
+    },
+    "promotion_content": {
+      "title": "Promotion Content",
+      "type": "string"
+    },
+    "promotion_link": {
+      "title": "Promotion Link",
+      "type": "string"
+    },
+    "active": {
+      "title": "Active?",
+      "type": "boolean"
+    },
+    "promotion_display_on_home": {
+      "title": "Display this promotion at home page?",
+      "type": "boolean"
+    },
+    "promotion_mobile_img": {
+      "title": "Mobile cover image",
+      "type": "string"
+    },
+    "promotion_desktop_img": {
+      "title": "Desktop cover image",
+      "type": "string"
+    },
+    "promotion_image_content": {
+      "title": "Promotion Image Content",
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "promotion_nanoid": { "ui:widget": "hidden" },
+    "home_nanoid": { "ui:widget": "hidden" },
+    "promotion_mobile_img": { "ui:widget": "filewidget" },
+    "promotion_desktop_img": { "ui:widget": "filewidget" },
+    "promotion_image_content": { "ui:widget": "filewidget" },
+    "created_at": { "ui:widget": "hidden" },
+    "active": {
+      "ui:widget": "radio"
+    },
+    "promotion_display_on_home": {
+      "ui:widget": "radio"
+    },
+    "promotion_content": {
+      "ui:widget": "contenteditorwidget"
+    }
+  }
+}

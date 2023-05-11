@@ -1,0 +1,42 @@
+{
+  "title": "CONTENT",
+  "type": "object",
+  "required": ["home_nanoid", "home_detail_title"],
+  "properties": {
+    "home_detail_nanoid": {
+      "type": "string"
+    },
+    "home_nanoid": {
+      "type": "object"
+    },
+    "home_detail_title": { "title": "Title", "type": "string" },
+    "home_detail_content": {
+      "title": "Content",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "media_url": {
+      "title": "Image",
+      "type": "string"
+    },
+    "media_nanoid": {
+      "title": "Image",
+      "type": "string"
+    }
+  },
+  "uiSchema": {
+    "home_detail_nanoid": { "ui:widget": "hidden" },
+    "media_nanoid": {
+      "ui:widget": "hidden"
+    },
+    "home_nanoid": { "ui:widget": "hidden" },
+    "media_url": { "ui:widget": "filewidget" },
+    "home_detail_content": {
+      "items": {
+        "ui:widget": "contenteditorwidget"
+      }
+    }
+  }
+}
