@@ -1,11 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { GA_TRACKING_ID } from '../utils/gtag'
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVJDKXHTBM" />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script async src="https://static.accesstrade.vn/js/trackingtag/tracking.min.js" />
 
           <script
@@ -15,7 +16,7 @@ export default class MyDocument extends Document {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
             
-              gtag('config', 'G-FVJDKXHTBM');
+              gtag('config', ${GA_TRACKING_ID});
             `
             }}
           />
